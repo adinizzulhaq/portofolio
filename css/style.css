@@ -139,6 +139,18 @@ html {
   box-shadow: rgba(0, 0, 0, 0.1) 0 3px 5px;
 }
 
+.navbar-container .hamburger-menu div {
+  width: 25px;
+  height: 2px;
+  background-color: var(--primaryText);
+  margin: 7px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
 .navbar-container .hamburger-menu {
   display: none;
 }
@@ -503,43 +515,6 @@ footer .footer-icon a:hover svg {
     padding: 6rem 1rem;
   }
 
-  .navbar-container .hamburger-menu {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  .navbar-container .hamburger-menu .line-1.active {
-    transform: rotate(-45deg) translate(-5px, 7px);
-    -webkit-transform: rotate(-45deg) translate(-5px, 7px);
-    -moz-transform: rotate(-45deg) translate(-5px, 7px);
-    -ms-transform: rotate(-45deg) translate(-5px, 7px);
-    -o-transform: rotate(-45deg) translate(-5px, 7px);
-  }
-
-  .navbar-container .hamburger-menu .line-2.active {
-    opacity: 0;
-  }
-
-  .navbar-container .hamburger-menu .line-3.active {
-    transform: rotate(45deg) translate(-5px, -7px);
-    -webkit-transform: rotate(45deg) translate(-5px, -7px);
-    -moz-transform: rotate(45deg) translate(-5px, -7px);
-    -ms-transform: rotate(45deg) translate(-5px, -7px);
-    -o-transform: rotate(45deg) translate(-5px, -7px);
-  }
-
-  .navbar-container .hamburger-menu > div {
-    width: 25px;
-    height: 2px;
-    background-color: #000;
-    margin: 7px;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-  }
-
   .navbar-container .navbar-extra {
     background-color: var(--primaryBackground);
     position: absolute;
@@ -568,6 +543,36 @@ footer .footer-icon a:hover svg {
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
+  }
+
+  .navbar-container .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu.toggle-close .line-1 {
+    transform: rotate(-45deg) translate(-5px, 7px);
+    -webkit-transform: rotate(-45deg) translate(-5px, 7px);
+    -moz-transform: rotate(-45deg) translate(-5px, 7px);
+    -ms-transform: rotate(-45deg) translate(-5px, 7px);
+    -o-transform: rotate(-45deg) translate(-5px, 7px);
+  }
+
+  .hamburger-menu.toggle-close .line-2 {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+
+  .hamburger-menu.toggle-close .line-3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+    -webkit-transform: rotate(45deg) translate(-5px, -7px);
+    -moz-transform: rotate(45deg) translate(-5px, -7px);
+    -ms-transform: rotate(45deg) translate(-5px, -7px);
+    -o-transform: rotate(45deg) translate(-5px, -7px);
   }
 
   #hero {
