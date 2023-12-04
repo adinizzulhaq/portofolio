@@ -10,6 +10,7 @@ document.querySelector(".hamburger-menu").onclick = () => {
 document.addEventListener("click", function (e) {
   if (!hamburgerMenu.contains(e.target) && !navbarExtra.contains(e.target)) {
     navbarExtra.classList.remove("active");
+    hamburgerMenu.classList.remove("toggle-close");
   }
 });
 
