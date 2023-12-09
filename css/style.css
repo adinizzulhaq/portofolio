@@ -116,6 +116,30 @@ html {
   gap: 2.5rem;
 }
 
+.navbar-container .navbar-extra .nav-link::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--primaryIcon);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+}
+
+.navbar-container .navbar-extra .nav-link:hover::after {
+  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+  -moz-transform: scaleX(0.5);
+  -ms-transform: scaleX(0.5);
+  -o-transform: scaleX(0.5);
+}
+
 .navbar-container .navbar-extra .btn-resume {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -136,7 +160,7 @@ html {
 }
 
 .navbar-container .navbar-extra .btn-resume:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 5px;
+  box-shadow: var(--primaryIcon) 0 0 5px;
 }
 
 .navbar-container .hamburger-menu div {
